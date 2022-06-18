@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js with Prismic Starter Repository
 
 ## Getting Started
 
-First, run the development server:
+<br>
+
+### Starting the development server
+
+To start the development server, run the following command:
 
 ```bash
-npm run dev
-# or
 yarn dev
+# or
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<br>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Starting the Slicemachine environment
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+To start creating and editing slices, open Slicemachine with the following command:
 
-## Learn More
+```bash
+yarn slicemachine
+# or
+npm run slicemachine
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open [http://localhost:9999](http://localhost:9999) to access the Slicemachine user interface.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Deployment
 
-## Deploy on Vercel
+Deploy on [Vercel](https://vercel.com) with the [Vercel CLI](https://vercel.com/cli) tool. </br>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create a Vercel account, then login to the CLI:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+vercel login
+```
+
+Run the deploy command, then follow the CLI instructions:
+
+```bash
+vercel deploy
+```

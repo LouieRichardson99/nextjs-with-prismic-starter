@@ -1,0 +1,29 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "hero",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Integrate front-end deliverables",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Fugiat anim labore quis ipsum amet culpa elit esse id mollit. Commodo ipsum minim et labore veniam nostrud veniam.",
+          "spans": []
+        }
+      ],
+      "link": {
+        "link_type": "Web",
+        "url": "https://prismic.io"
+      },
+      "linkText": "unleash impactful mindshare"
+    }
+  }
+]

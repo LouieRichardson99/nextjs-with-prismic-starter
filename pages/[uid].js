@@ -1,9 +1,10 @@
 import { SliceZone } from "@prismicio/react"
-import { createClient } from "../prismicio"
+import * as prismicHelpers from "@prismicio/helpers"
+import { createClient, linkResolver } from "../prismicio"
 import { Layout } from "../components/Layout"
 import { components } from "../slices"
 
-const Homepage = ({ data, url, lang, ...layout }) => {
+const Page = ({ data, url, lang, ...layout }) => {
   const seo = {
     metaTitle: data?.metaTitle,
     metaDescription: data?.metaDescription,
@@ -20,10 +21,20 @@ const Homepage = ({ data, url, lang, ...layout }) => {
   )
 }
 
-export async function getStaticProps({ previewData }) {
+export async function getStaticPaths() {
+  const client = createClient()
+  const pages = await client.getAllByType("page")
+
+  return {
+    paths: pages.map((doc) => prismicHelpers.asLink(doc, linkResolver)),
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData })
 
-  const page = await client.getSingle("homepage")
+  const page = await client.getByUID("page", params.uid)
   const header = await client.getSingle("header")
   const footer = await client.getSingle("footer")
 
@@ -32,4 +43,4 @@ export async function getStaticProps({ previewData }) {
   }
 }
 
-export default Homepage
+export default Page

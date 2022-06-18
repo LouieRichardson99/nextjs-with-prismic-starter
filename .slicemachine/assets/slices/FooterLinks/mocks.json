@@ -1,0 +1,60 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "footer_links",
+    "items": [
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "linkText": "strategize vertical mindshare"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "linkText": "brand sexy e-markets"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "linkText": "unleash ubiquitous networks"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "linkText": "reinvent wireless deliverables"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "linkText": "disintermediate magnetic architectures"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "linkText": "engage best-of-breed deliverables"
+      }
+    ],
+    "primary": {
+      "sectionTitle": [
+        {
+          "type": "heading4",
+          "text": "Transition B2B communities",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

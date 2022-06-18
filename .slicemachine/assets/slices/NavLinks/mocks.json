@@ -1,0 +1,52 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "nav_links",
+    "items": [
+      {
+        "linkText": "maximize ubiquitous communities",
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "linkText": "implement distributed architectures",
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "linkText": "redefine 24/7 content",
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "linkText": "incubate mission-critical action-items",
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "linkText": "incubate intuitive e-services",
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "linkText": "whiteboard back-end partnerships",
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      }
+    ],
+    "primary": {}
+  }
+]

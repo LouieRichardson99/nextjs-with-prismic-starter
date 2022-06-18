@@ -2,8 +2,9 @@ import { SliceZone } from "@prismicio/react"
 import { createClient } from "../prismicio"
 import { Layout } from "../components/Layout"
 import { components } from "../slices"
+import { ContactForm } from "../components/Form/Contact"
 
-const Homepage = ({ data, url, lang, ...layout }) => {
+const Contact = ({ data, url, lang, ...layout }) => {
   const seo = {
     metaTitle: data?.metaTitle,
     metaDescription: data?.metaDescription,
@@ -15,6 +16,7 @@ const Homepage = ({ data, url, lang, ...layout }) => {
 
   return (
     <Layout seo={seo} {...layout}>
+      <ContactForm />
       <SliceZone slices={data?.slices} components={components} />
     </Layout>
   )
@@ -23,7 +25,7 @@ const Homepage = ({ data, url, lang, ...layout }) => {
 export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData })
 
-  const page = await client.getSingle("homepage")
+  const page = await client.getSingle("contact")
   const header = await client.getSingle("header")
   const footer = await client.getSingle("footer")
 
@@ -32,4 +34,4 @@ export async function getStaticProps({ previewData }) {
   }
 }
 
-export default Homepage
+export default Contact
