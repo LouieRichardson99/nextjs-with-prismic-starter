@@ -1,5 +1,6 @@
 import { Fragment } from "react"
 import { PrismicLink } from "@prismicio/react"
+import styles from "./styles.module.scss"
 
 const NavLinks = ({ slice: { items } }) => (
   <Fragment>

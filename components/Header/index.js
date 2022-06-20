@@ -1,9 +1,7 @@
-import Image from "next/image"
-import Link from "next/link"
 import * as prismicHelpers from "@prismicio/helpers"
-import { SliceZone } from "@prismicio/react"
-import { components } from "../../slices"
 import styles from "./styles.module.scss"
+import { DesktopNav } from "./DesktopNav"
+import { MobileNav } from "./MobileNav"
 
 export const Header = ({ logo, slices }) => {
   const image = {
@@ -15,21 +13,8 @@ export const Header = ({ logo, slices }) => {
 
   return (
     <header className={styles.container}>
-      <Link href="/">
-        <div className={styles.image}>
-          <Image
-            src={image.src}
-            alt={image.alt}
-            width={image.width}
-            height={image.height}
-          />
-        </div>
-      </Link>
-      <nav className={styles.nav}>
-        <ul className={styles.navList}>
-          <SliceZone slices={slices} components={components} />
-        </ul>
-      </nav>
+      <DesktopNav image={image} slices={slices} />
+      <MobileNav image={image} slices={slices} />
     </header>
   )
 }

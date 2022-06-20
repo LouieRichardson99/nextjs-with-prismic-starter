@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: 599px) {
+    display: none;
+  }
+}
+
+.image {
+  width: 8rem;
+}
+
+.nav {
+  margin: auto 0;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
