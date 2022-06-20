@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+  margin: auto;
+  max-width: 30rem;
+  width: 100%;
+}
+
+.button {
+  background-color: #292929;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  width: max-content;
+  border: 0;
+  cursor: pointer;
+}

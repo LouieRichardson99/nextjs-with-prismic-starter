@@ -1,4 +1,4 @@
-import { Fragment } from "react"
+import styles from "./styles.module.scss"
 
 export const Input = ({
   name,
@@ -9,8 +9,10 @@ export const Input = ({
   register,
   autoComplete,
 }) => (
-  <Fragment>
-    <label htmlFor={name}>{label}</label>
+  <div>
+    <label htmlFor={name} className={styles.label}>
+      {label}
+    </label>
     {type === "textarea" ? (
       <textarea
         name={name}
@@ -19,6 +21,7 @@ export const Input = ({
         {...register(name, { required })}
         placeholder={placeholder}
         autoComplete={autoComplete}
+        className={styles.textarea}
       />
     ) : (
       <input
@@ -27,7 +30,8 @@ export const Input = ({
         type={type}
         {...register(name, { required })}
         placeholder={placeholder}
+        className={styles.input}
       />
     )}
-  </Fragment>
+  </div>
 )

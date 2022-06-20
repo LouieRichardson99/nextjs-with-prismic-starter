@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { Input } from "../Input"
+import styles from "./styles.module.scss"
 
 export const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -12,7 +13,7 @@ export const ContactForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
       <Input
         name="full_name"
         label="Full Name"
@@ -41,7 +42,7 @@ export const ContactForm = () => {
       {isSubmitted ? (
         <p>Thank you for getting in touch.</p>
       ) : (
-        <button>Submit</button>
+        <button className={styles.button}>Submit</button>
       )}
     </form>
   )
