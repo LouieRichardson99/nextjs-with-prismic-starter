@@ -5,7 +5,7 @@ const CallToAction = ({
     primary: { title, link, linkText },
   },
 }) => (
-  <section>
+  <section className="container">
     <PrismicRichText field={title} />
     <PrismicLink field={link}>{linkText}</PrismicLink>
   </section>

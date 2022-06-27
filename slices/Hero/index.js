@@ -5,7 +5,7 @@ const Hero = ({
     primary: { title, description, link, linkText },
   },
 }) => (
-  <section>
+  <section className="container">
     <PrismicRichText field={title} />
     <PrismicRichText field={description} />
     <PrismicLink field={link}>{linkText}</PrismicLink>

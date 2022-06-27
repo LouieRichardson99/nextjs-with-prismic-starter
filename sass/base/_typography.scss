@@ -1,0 +1,25 @@
+@use "../abstracts/" as *;
+
+:root {
+  --ff-body: "Inter", sans-serif;
+
+  --fs-800: 2.25rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1rem;
+}
+
+@include mq("large") {
+  :root {
+    --fs-800: 2.5rem;
+  }
+}
+
+body {
+  font-family: var(--ff-body);
+  color: $color-shark;
+}
+
+h1 {
+  font-size: var(--fs-800);
+}

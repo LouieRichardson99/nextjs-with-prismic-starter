@@ -3,9 +3,9 @@ import { components } from "../../slices"
 import styles from "./styles.module.scss"
 
 export const Footer = ({ slices }) => (
-  <footer className={styles.footer}>
+  <footer className="container">
     <nav>
-      <ul className={styles.navList}>
+      <ul className={styles.navLinks}>
         <SliceZone slices={slices} components={components} />
       </ul>
     </nav>

@@ -11,7 +11,7 @@
     "format": "prettier --write \"{.slicemachine,.storybook,components,context,customtypes,docs,pages,slices,styles,utils}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md}\""
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.4",
+    "@headlessui/react": "^1.6.5",
     "@heroicons/react": "^1.0.6",
     "@prismicio/client": "^6.5.1",
     "@prismicio/helpers": "^2.3.1",

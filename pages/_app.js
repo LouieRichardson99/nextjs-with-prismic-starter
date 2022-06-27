@@ -1,8 +1,8 @@
-import "../styles/globals.scss"
 import Link from "next/link"
 import { PrismicProvider } from "@prismicio/react"
 import { PrismicPreview } from "@prismicio/next"
 import { linkResolver, repositoryName } from "../prismicio"
+import "../sass/main.scss"
 
 const App = ({ Component, pageProps }) => {
   return (

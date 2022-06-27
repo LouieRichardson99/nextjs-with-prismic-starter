@@ -1,18 +1,13 @@
-import { useState } from "react"
+import { Fragment } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { SliceZone } from "@prismicio/react"
 import { components } from "../../../slices"
 import styles from "./styles.module.scss"
 import { MenuIcon, XIcon } from "@heroicons/react/solid"
+import { Popover } from "@headlessui/react"
 
 export const MobileNav = ({ slices, image }) => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const handleMenu = () => {
-    setIsOpen(!isOpen)
-  }
-
   return (
     <div className={styles.container}>
       <Link href="/">
@@ -26,22 +21,28 @@ export const MobileNav = ({ slices, image }) => {
         </div>
       </Link>
 
-      <button className={styles.button} onClick={handleMenu}>
-        <MenuIcon />
-      </button>
+      <Popover>
+        {({ open }) => (
+          <Fragment>
+            <Popover.Button className={styles.button}>
+              <MenuIcon />
+            </Popover.Button>
 
-      {isOpen && (
-        <nav className={styles.nav}>
-          <div className={styles.menuButtonContainer}>
-            <button className={styles.button} onClick={handleMenu}>
-              <XIcon />
-            </button>
-          </div>
-          <ul className={styles.navList}>
-            <SliceZone slices={slices} components={components} />
-          </ul>
-        </nav>
-      )}
+            {open && (
+              <nav className={styles.nav}>
+                <div className={styles.menuButtonContainer}>
+                  <button className={styles.button}>
+                    <XIcon />
+                  </button>
+                </div>
+                <ul className={styles.navList}>
+                  <SliceZone slices={slices} components={components} />
+                </ul>
+              </nav>
+            )}
+          </Fragment>
+        )}
+      </Popover>
     </div>
   )
 }
