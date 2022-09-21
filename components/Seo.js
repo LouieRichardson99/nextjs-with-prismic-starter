@@ -1,41 +1,39 @@
-import Head from "next/head"
+import { NextSeo } from "next-seo"
 
-export const Seo = ({
-  metaTitle,
-  metaDescription,
-  metaImage,
-  url,
-  article,
-  author,
-  lang,
-}) => {
-  const absoluteUrl = `https://example.com/${url ? url : ""}` // Todo: Change to website url
+export const Seo = ({ metaTitle, metaDescription, metaImage, url }) => {
+  const absoluteUrl = `https://example.com${url ? url : ""}` // TODO: Change URL
+  const siteName = "Example Site Name" // TODO: Change site name
+  const twitter = {
+    handle: "@example", // TODO: Change Twitter handle
+    site: "@example", // TODO: Change Twitter site
+  }
 
-  return (
-    <Head>
-      <title>{metaTitle}</title>
-      <meta lang={lang} />
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      {metaDescription && <meta name="description" content={metaDescription} />}
-      <meta name="og:title" content={metaTitle} />
-      {metaDescription && (
-        <meta name="og:description" content={metaDescription} />
-      )}
-      <meta name="og:type" content={article ? "article" : "website"} />
-      {metaImage && <meta name="og:image" content={metaImage} />}
-      {metaImage && <meta name="og:image:alt" content={metaTitle} />}
-      <meta name="og:url" content={absoluteUrl} />
-      <meta name="twitter:card" content="summary_large_image" />
-      {author && <meta name="twitter:creator" content={author} />}
-      <meta name="twitter:title" content={metaTitle} />
-      {metaDescription && (
-        <meta name="twitter:description" content={metaDescription} />
-      )}
-      {metaImage && <meta name="twitter:image" content={metaImage} />}
-      {metaImage && <meta name="twitter:image:alt" content={metaTitle} />}
-      {/* Todo: Change favicon */}
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-  )
+  const seoConfig = {
+    title: metaTitle,
+    description: metaDescription,
+    openGraph: {
+      url: absoluteUrl,
+      title: metaTitle,
+      type: "website",
+      description: metaDescription,
+      images: [
+        {
+          url: metaImage?.url || "",
+          alt: metaImage?.url || "",
+          width: metaImage?.dimensions?.width || "",
+          height: metaImage?.dimensions?.height || "",
+        },
+      ],
+      site_name: siteName,
+    },
+
+    twitter: {
+      handle: twitter.handle,
+      site: twitter.site,
+      cardType: "summary_large_image",
+    },
+    additionalLinkTags: [{ rel: "icon", href: "/favicon.png" }], // TODO: Make sure favicon url is correct
+  }
+
+  return <NextSeo {...seoConfig} />
 }
